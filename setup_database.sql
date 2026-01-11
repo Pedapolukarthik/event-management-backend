@@ -30,3 +30,4 @@ DESCRIBE event;
 -- Or use:
 -- SHOW COLUMNS FROM event;
 
+
