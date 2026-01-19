@@ -2,7 +2,7 @@ const express = require('express');
 const cors = require('cors');
 
 const authRoutes = require('./routes/auth');
-const eventRoutes = require('./routes/eventRoutes'); // ✅ ADD THIS
+const eventRoutes = require('./routes/eventRoutes');
 
 const app = express();
 
@@ -10,8 +10,10 @@ app.use(cors());
 app.use(express.json());
 
 app.use('/api', authRoutes);
-app.use('/api/events', eventRoutes); // ✅ ADD THIS
+app.use('/api/events', eventRoutes);
 
-app.listen(5000, () => {
-  console.log('Backend running on http://localhost:5000');
+const PORT = process.env.PORT || 5000;
+
+app.listen(PORT, () => {
+  console.log(`Backend running on port ${PORT}`);
 });
