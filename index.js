@@ -1,5 +1,7 @@
 const express = require('express');
 const cors = require('cors');
+require('./config/db');
+
 
 const authRoutes = require('./routes/auth');
 const eventRoutes = require('./routes/eventRoutes');
